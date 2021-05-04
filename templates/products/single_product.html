@@ -1,0 +1,7 @@
+<div class="well products">
+    <a href="/products/{{ product.id }}">  <!-- Routar að gefnu ID-->
+        <img class="product-img" alt="asd" src="{{ product.prodimage_set.first.image }}" />
+        <h4> {{ product.name }}</h4>
+        <p>{{ product.description }}</p>
+    </a>
+</div>

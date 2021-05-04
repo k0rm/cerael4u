@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>{{ product.name }}</h1>
+    <p>{{ product.description }}</p>
+    <p>${{ product.price }}</p>
+    {% for product_image in product.prodimage_set.all %}
+        <img src="{{ product_image.image }}" class="product-image" />
+    {% endfor %}
+    <a href="{% url 'delete_product' product.id %}" class="block btn btn-primary">Delete Product</a>
+    <a href="{% url 'update_product' product.id %}" class="block btn btn-primary">Update Product</a>
+{% endblock %}
